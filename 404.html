@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Lost in the Void</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Specific 404 Styles */
+        .not-found-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
+        }
+        .error-message {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- tsParticles Container -->
+    <div id="tsparticles"></div>
+
+    <main>
+        <section class="not-found-section">
+            <div class="container">
+                <h1 class="error-code gradient-text">404</h1>
+                <p class="error-message">You've wandered into the void.</p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn-primary">
+                        <i class="fa-solid fa-house"></i> Return to Reality
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- tsParticles Engine and Config -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-stars@3.0.3/tsparticles.preset.stars.min.js"></script>
+    <script type="module">
+        import { initParticles } from './js/modules/particles.js';
+        document.addEventListener('DOMContentLoaded', initParticles);
+    </script>
+</body>
+</html>

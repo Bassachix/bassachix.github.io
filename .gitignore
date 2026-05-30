@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp files
+*.log
+*.tmp
+obfuscate.js

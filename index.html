@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khairul Fahmi — Creative Hub. The hub connecting all my creations and digital projects.">
+    <meta name="keywords" content="Khairul Fahmi, Creative Hub, Projects, Web Developer, Bassachix">
+    <meta name="author" content="Khairul Fahmi">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bassachix Hub">
+    <meta property="og:description" content="The hub connecting all my creations and digital projects.">
+    <meta property="og:type" content="website">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./css/main.css?v=64" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.css?v=64">
+
+    <title>Bassachix Hub</title>
+    <meta name="theme-color" content="#06b6d4">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Background Layers -->
+    <div id="bg-layer"></div>
+    <div id="bg-overlay"></div>
+
+    <!-- ==================== HEADER ==================== -->
+    <div id="preloader">
+        <div class="loader-logo">Bassachix<span>.</span></div>
+    </div>
+
+    <div id="tsparticles"></div>
+
+    <!-- Temporarily removed site-header and mobile-bottom-nav for debugging -->
+    <header id="site-header" class="site-header">
+        <div class="header-bg"></div>
+        
+        <!-- Scroll Progress Bar -->
+        <div id="scroll-progress"></div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <a href="#hero" class="nav-logo">Bassachix<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#creations">Creations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="https://saweria.co/Bassachix" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-heart"></i> Support
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#creations">Creations</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://saweria.co/Bassachix" target="_blank" rel="noopener">Support ❤️</a></li>
+        </ul>
+    </header>
+
+    <!-- ===========================
+         HERO SECTION
+         =========================== -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    Creative Hub
+                </div>
+
+                <h1 class="hero-name">
+                    <span class="gradient-text">Bassachix</span>
+                </h1>
+
+                <div class="hero-typing-wrapper">
+                    <span id="typing-text"></span>
+                </div>
+
+                <p class="hero-description">
+                    Selamat datang di hub kreasi saya. Di sini Anda bisa menemukan seluruh karya digital yang telah saya buat — dari web apps hingga project eksperimental. Semua terhubung di satu tempat.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#creations" class="btn-primary">
+                        <i class="fa-solid fa-compass"></i> Explore
+                    </a>
+                    <a href="#gallery" class="btn-secondary">
+                        <i class="fa-solid fa-image"></i> Gallery
+                    </a>
+                </div>
+            </div>
+
+                <div class="hero-socials" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://github.com/Bassachix" target="_blank" rel="noopener" aria-label="GitHub" class="custom-tooltip" data-tooltip="Explore Repos">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@zb_fahmi" target="_blank" rel="noopener" aria-label="TikTok" class="custom-tooltip" data-tooltip="Watch Edits">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/luo_lansha/" target="_blank" rel="noopener" aria-label="Instagram" class="custom-tooltip" data-tooltip="Follow Me">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://discord.gg/zvYEd8QNe4" target="_blank" rel="noopener" aria-label="Discord" class="custom-tooltip" data-tooltip="Join Server">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://youtube.com/@zbfahmi" target="_blank" rel="noopener" aria-label="YouTube" class="custom-tooltip" data-tooltip="Subscribe">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://saweria.co/Bassachix" target="_blank" rel="noopener" aria-label="Saweria" class="custom-tooltip" data-tooltip="Support Me">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CREATIONS ==================== -->
+    <section id="creations" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Explore</span>
+                <h2 class="section-title">My Creations</h2>
+                <p class="section-subtitle" data-i18n="creations-subtitle">
+                    Every creation is a journey. Click to explore.
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" data-aos="fade-up" data-aos-delay="100" id="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="web-app">Web App</button>
+                <button class="filter-tab" data-filter="website">Website</button>
+                <button class="filter-tab" data-filter="other">Other</button>
+            </div>
+
+            <div class="creations-grid" id="creations-grid">
+
+                <!-- Creation 1: SIMBADA -->
+                <a href="#" class="creation-card" data-aos="fade-up" data-aos-delay="100" data-category="web-app" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="creation-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="creation-body">
+                        <div class="creation-meta">
+                            <span class="creation-badge">Web App</span>
+                            <span class="creation-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+                        </div>
+                        <h3>SIMBADA v2</h3>
+                        <p data-i18n="simbada-desc">Web-based Information System for data management and decision support systems (DSS).</p>
+                        <div class="creation-tech">
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Creation 2: Portfolio Website -->
+                <a href="#" class="creation-card" data-aos="fade-up" data-aos-delay="200" data-category="website" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="creation-icon purple">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="creation-body">
+                        <div class="creation-meta">
+                            <span class="creation-badge purple">Website</span>
+                            <span class="creation-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+                        </div>
+                        <h3>Creative Hub</h3>
+                        <p data-i18n="creative-hub-desc">Personal hub website with modern dark-theme design, glassmorphism, and smooth animations.</p>
+                        <div class="creation-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Creation 3: Placeholder project -->
+                <a href="#" class="creation-card" data-aos="fade-up" data-aos-delay="300" data-category="web-app" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="creation-icon green">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="creation-body">
+                        <div class="creation-meta">
+                            <span class="creation-badge green">Web App</span>
+                            <span class="creation-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+                        </div>
+                        <h3 data-i18n="next-project-title">Next Project</h3>
+                        <p data-i18n="next-project-desc">New creation is in development. Stay tuned for the latest updates.</p>
+                        <div class="creation-tech">
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Creation 4: Saweria / Support -->
+                <a href="https://saweria.co/Bassachix" target="_blank" rel="noopener" class="creation-card" data-aos="fade-up" data-aos-delay="400" data-category="other" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="creation-icon orange">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <div class="creation-body">
+                        <div class="creation-meta">
+                            <span class="creation-badge orange">Support</span>
+                            <span class="creation-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+                        </div>
+                        <h3>Saweria</h3>
+                        <p data-i18n="saweria-desc">Support my creations by buying me a coffee. Every support means a lot! ☕</p>
+                        <div class="creation-tech">
+                            <span>Saweria</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Creation 5: GitHub Profile -->
+                <a href="https://github.com/Bassachix" target="_blank" rel="noopener" class="creation-card" data-aos="fade-up" data-aos-delay="500" data-category="other" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="creation-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="creation-body">
+                        <div class="creation-meta">
+                            <span class="creation-badge">Profile</span>
+                            <span class="creation-arrow"><i class="fa-solid fa-arrow-up-right"></i></span>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p data-i18n="github-desc">See all my repositories, open-source contributions, and code on GitHub.</p>
+                        <div class="creation-tech">
+                            <span>Open Source</span>
+                            <span>Repositories</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Artworks</span>
+                <h2 class="section-title">My Gallery</h2>
+                <p class="section-subtitle" data-i18n="gallery-subtitle">
+                    Collection of images, illustrations, or favorite moments I've captured.
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                      <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/aert.webp" alt="Gallery Art 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Aerith</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 (Tall Portrait moved here for balance) -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/myb.webp" alt="Gallery Art 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Miyabi</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/kono.webp" alt="Gallery Art 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Megumin</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/Rya.webp" alt="Gallery Art 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Ryza</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 (Landscape moved here) -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/delta.webp" alt="Gallery Art 5" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Delta</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/ww.webp" alt="Gallery Art 6" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Wuthering Waves</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/mc.webp" alt="Gallery Art 7" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Minecraft Party</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10" data-tilt-speed="400">
+                    <img src="./assets/images/gallery/oc.webp" alt="Gallery Art 8" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>My OC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-compact" data-aos="zoom-in-up" data-aos-duration="1000">
+                <div class="about-avatar-wrapper" data-tilt data-tilt-max="15" data-tilt-speed="400">
+                    <img src="./assets/images/about/profile.webp" 
+                         alt="Khairul Fahmi" 
+                         class="about-avatar">
+                </div>
+                <div class="about-details">
+                    <span class="section-label">Who's behind this?</span>
+                    <h2 class="section-title">Khairul Fahmi</h2>
+                    <div class="about-status">
+                        <i class="fa-solid fa-location-dot"></i> Based in Indonesia &nbsp;&bull;&nbsp; <i class="fa-regular fa-clock"></i> <span id="local-time">--:--:--</span>
+                    </div>
+                    <p class="about-bio" data-i18n="about-bio">
+                        I'm a digital creator who loves building interesting things on the web. 
+                        This hub is where all my creations are connected — 
+                        from web apps, websites, to other digital experiments. 
+                        If you're interested in collaborating or just chatting, don't hesitate to contact me.
+                    </p>
+                    <div class="about-actions">
+                        <a href="#contact" class="btn-primary btn-sm">
+                            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                        </a>
+                        <a href="#creations" class="btn-secondary btn-sm">
+                            <i class="fa-solid fa-compass"></i> See Creations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-compact">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Say Hello</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle" data-i18n="contact-subtitle">
+                        Have a collaboration idea, a question, or just want to say hi? 
+                        Contact me through the channels below.
+                    </p>
+                </div>
+
+                <div class="contact-channels">
+                    <a href="https://github.com/Bassachix" target="_blank" rel="noopener" class="channel-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="channel-icon purple">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="channel-text">
+                            <span class="channel-label">GitHub</span>
+                            <span class="channel-value">Explore Repositories</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right channel-arrow"></i>
+                    </a>
+
+                    <a href="https://saweria.co/Bassachix" target="_blank" rel="noopener" class="channel-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="channel-icon orange">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                        <div class="channel-text">
+                            <span class="channel-label">Support Me</span>
+                            <span class="channel-value">Buy me a coffee</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right channel-arrow"></i>
+                    </a>
+
+                    <a href="https://discord.gg/zvYEd8QNe4" target="_blank" rel="noopener" class="channel-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="channel-icon blurple">
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                        <div class="channel-text">
+                            <span class="channel-label">Discord Server</span>
+                            <span class="channel-value">Join Community</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right channel-arrow"></i>
+                    </a>
+
+                    <a href="https://youtube.com/@zbfahmi" target="_blank" rel="noopener" class="channel-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="channel-icon orange">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div class="channel-text">
+                            <span class="channel-label">YouTube</span>
+                            <span class="channel-value">@zbfahmi</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right channel-arrow"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@zb_fahmi" target="_blank" rel="noopener" class="channel-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="channel-icon pink">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="channel-text">
+                            <span class="channel-label">TikTok</span>
+                            <span class="channel-value">Watch Edits</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right channel-arrow"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/luo_lansha/" target="_blank" rel="noopener" class="channel-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                        <div class="channel-icon instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="channel-text">
+                            <span class="channel-label">Instagram</span>
+                            <span class="channel-value">Follow Me</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right channel-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content" data-aos="fade-up">
+                <div class="footer-brand">
+                    Bassachix<span>.</span>
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#creations">Creations</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom" data-aos="fade-in" data-aos-delay="200">
+                <p>&copy; <span id="current-year"></span> Khairul Fahmi. Built with ❤️ and ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <canvas id="audio-visualizer"></canvas>
+
+    <!-- Scripts -->
+    <!-- Background Audio -->
+    <audio id="bg-audio" loop>
+        <source src="assets/audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Audio Toggle Button -->
+    <button id="audio-toggle" aria-label="Toggle background music">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Gallery Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-img" src="" alt="Zoomed Artwork">
+    </div>
+
+    <!-- Vanilla Tilt JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" defer></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    
+    <!-- tsParticles (Slim version for better performance) -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2/tsparticles.slim.bundle.min.js" defer></script>
+    
+    <script type="module" src="./js/main.js?v=64"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Determine base path dynamically for GitHub Pages vs Localhost
+                const basePath = window.location.pathname.startsWith('/bassachix') ? '/bassachix/' : '/';
+                navigator.serviceWorker.register(basePath + 'sw.js')
+                    .then(reg => console.log('PWA Service Worker registered.', reg.scope))
+                    .catch(err => console.log('PWA SW registration failed:', err));
+            });
+        }
+    </script>
+</body>
+</html>

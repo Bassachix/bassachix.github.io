@@ -1,0 +1,128 @@
+/* ===========================
+   RESET & BASE
+   =========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><circle cx='8' cy='8' r='4' fill='%2306b6d4'/></svg>") 8 8, auto;
+}
+
+/* Background image on fixed div for performance */
+#bg-layer {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  /* Fallback for older browsers */
+  height: calc(100vh + 20px);
+  /* Modern browsers: Large Viewport Height prevents resizing when address bar hides */
+  height: calc(100lvh + 20px);
+  background-image: url('../assets/images/backgrounds/KantaiBgg.webp');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Pre-blur static layer (Desktop) */
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* We previously disabled blur on mobile, but it's safe since it's a standard filter, not backdrop-filter */
+
+/* Dark overlay for anime background to ensure readability */
+#bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Fallback */
+  height: 100lvh; /* Lock height */
+  background: rgba(10, 10, 15, 0.65); /* Semi-transparent dark overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+a, button, .filter-tab, .gallery-item {
+  text-decoration: none;
+  color: inherit;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><circle cx='12' cy='12' r='8' fill='none' stroke='%2306b6d4' stroke-width='2'/><circle cx='12' cy='12' r='3' fill='%2306b6d4'/></svg>") 12 12, pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===========================
+   TS PARTICLES
+   =========================== */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===========================
+   CUSTOM SCROLLBAR & SELECTION
+   =========================== */
+::selection {
+  background: var(--accent-start);
+  color: #0a0a0f;
+}
+
+::-moz-selection {
+  background: var(--accent-start);
+  color: #0a0a0f;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gradient); 
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0891b2, #7c3aed); /* Slightly darker gradient on hover */
+}
+

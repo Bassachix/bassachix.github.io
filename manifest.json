@@ -1,0 +1,23 @@
+{
+  "name": "Bassachix Creative Hub",
+  "short_name": "Bassachix",
+  "description": "Portofolio dan Creative Hub Khairul Fahmi.",
+  "start_url": "/bassachix/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#06b6d4",
+  "icons": [
+    {
+      "src": "assets/images/placeholder.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/placeholder.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
